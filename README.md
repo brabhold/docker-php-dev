@@ -1,4 +1,4 @@
-# Custom build of PHP for production.
+# Custom build of PHP for development.
 
 See repository on [Docker Hub](https://hub.docker.com/repository/docker/brabholdsa/php-dev)
 
