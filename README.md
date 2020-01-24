@@ -4,9 +4,15 @@ See repository on [Docker Hub](https://hub.docker.com/repository/docker/brabhold
 
 # Supported tags and respective `Dockerfile` links
 
-- [ `7.3-apache` (*apache/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/apache/Dockerfile)
-- [ `7.3-cli` (*cli/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/cli/Dockerfile)
-- [ `7.3-fpm` (*fpm/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/fpm/Dockerfile)
+- [ `7.4-apache` (*apache/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/apache/Dockerfile)
+- [ `7.4-cli` (*cli/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/cli/Dockerfile)
+- [ `7.4-fpm` (*fpm/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/master/fpm/Dockerfile)
+- [ `7.3-apache` (*apache/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/7.3/apache/Dockerfile)
+- [ `7.3-cli` (*cli/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/7.3/cli/Dockerfile)
+- [ `7.3-fpm` (*fpm/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/7.3/fpm/Dockerfile)
+- [ `5.6-apache` (*apache/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/5.6/apache/Dockerfile)
+- [ `5.6-cli` (*cli/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/5.6/cli/Dockerfile)
+- [ `5.6-fpm` (*fpm/Dockerfile*)](https://github.com/brabhold/docker-php-dev/blob/5.6/fpm/Dockerfile)
 
 # How to use this image
 
