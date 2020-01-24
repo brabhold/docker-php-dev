@@ -1,11 +1,11 @@
-FROM brabholdsa/php:7.3-apache
+FROM brabholdsa/php:5.6-apache
 LABEL maintainer="Yannick Vanhaeren"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Add php extensions
 RUN set -eux; \
-    pecl install xdebug; \
+    pecl install xdebug-2.5.1; \
     docker-php-ext-enable xdebug; \
     pecl clear-cache; \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $PHP_BUILD_DEPS
