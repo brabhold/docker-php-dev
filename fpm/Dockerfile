@@ -7,8 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN set -eux; \
     pecl install xdebug; \
     docker-php-ext-enable xdebug; \
-    pecl clear-cache; \
-    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $PHP_BUILD_DEPS
+    pecl clear-cache
 
 RUN set -eux; \
     docker-php-source extract; \
