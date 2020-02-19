@@ -21,6 +21,7 @@ RUN set -eux; \
     sed -i -e "s|;cgi.fix_pathinfo=1|cgi.fix_pathinfo = 0|" php.ini; \
     sed -i -e "s|;realpath_cache_size = 4096k|realpath_cache_size = 4096K|" php.ini; \
     sed -i -e "s|;realpath_cache_ttl = 120|realpath_cache_ttl = 600|" php.ini; \
+    sed -i -e "s|;sendmail_path =|sendmail_path = /usr/sbin/sendmail -t -i -S smtp:1025|" php.ini; \
     docker-php-source delete
 
 RUN set -eux; \
