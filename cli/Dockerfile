@@ -15,6 +15,7 @@ RUN set -eux; \
     cd /usr/local/etc/php; \
     sed -i -e "s|max_execution_time = 30|max_execution_time = 60|" php.ini; \
     sed -i -e "s|memory_limit = 128M|memory_limit = 512M|" php.ini; \
+    sed -i -e "s|;max_input_vars= 1000|max_input_vars = 3000|" php.ini; \
     sed -i -e "s|post_max_size = 8M|post_max_size = 55M|" php.ini; \
     sed -i -e "s|upload_max_filesize = 2M|upload_max_filesize = 50M|" php.ini; \
     sed -i -e "s|;date.timezone =|date.timezone = Europe/Brussels|" php.ini; \
