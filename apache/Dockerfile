@@ -1,4 +1,4 @@
-FROM brabholdsa/php:8.1-apache
+FROM brabholdsa/php:8.2-apache
 LABEL maintainer="Yannick Vanhaeren"
 
 ARG DEBIAN_FRONTEND=noninteractive
