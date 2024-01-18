@@ -3,6 +3,15 @@ LABEL maintainer="Yannick Vanhaeren"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN set -eux; \
+    apt-get update && apt-get install -y --no-install-recommends \
+        git \
+        less \
+        vim \
+        unzip; \
+    apt-get clean; \
+    rm -r /var/lib/apt/lists/*;
+
 # Add php extensions
 RUN set -eux; \
     pecl install xdebug-3.1.6; \
