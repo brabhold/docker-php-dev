@@ -3,7 +3,7 @@ LABEL maintainer="Yannick Vanhaeren"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN set -eux; \
+RUN set -e; \
     apt-get update && apt-get install -y --no-install-recommends \
         git \
         less \
@@ -13,12 +13,12 @@ RUN set -eux; \
     rm -r /var/lib/apt/lists/*;
 
 # Add php extensions
-RUN set -eux; \
+RUN set -e; \
     pecl install xdebug-3.1.6; \
     docker-php-ext-enable xdebug; \
     pecl clear-cache
 
-RUN set -eux; \
+RUN set -e; \
     docker-php-source extract; \
     cp /usr/src/php/php.ini-development /usr/local/etc/php/php.ini; \
     cd /usr/local/etc/php; \
@@ -34,15 +34,15 @@ RUN set -eux; \
     sed -i -e "s|;sendmail_path =|sendmail_path = /usr/bin/msmtp -t|" /usr/local/etc/php/php.ini; \
     docker-php-source delete
 
-RUN set -eux; \
+RUN set -e; \
     sed -i -e "s|account default : transmeat|account default : mailhog|" /etc/msmtprc
 
-RUN set -eux; \
+RUN set -e; \
     cd /usr/local/etc/php/conf.d; \
     echo "opcache.revalidate_freq=0" >> docker-php-ext-opcache.ini; \
     sed -i -e "s|opcache.validate_timestamps=0|opcache.validate_timestamps=1|" docker-php-ext-opcache.ini
 
-RUN set -eux; \
+RUN set -e; \
     cd /usr/local/etc/php/conf.d; \
     sed -i -e "s|zend_extension|;zend_extension|" docker-php-ext-xdebug.ini; \
     echo "xdebug.default_enable=1" >> docker-php-ext-xdebug.ini; \
