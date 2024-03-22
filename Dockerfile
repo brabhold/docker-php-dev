@@ -1,12 +1,21 @@
-ARG PHP_BASE_IMAGE=
+ARG PHP_BASE_IMAGE
 
 FROM $PHP_BASE_IMAGE
 
-ARG PHP_BASE_IMAGE=
+ARG PHP_BASE_IMAGE
+ARG NODE_VERSION
 
 LABEL maintainer="Yannick Vanhaeren"
 
 ARG DEBIAN_FRONTEND=noninteractive
+
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+RUN set -e; \
+    curl --silent --show-error --location "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" | \
+    tar --extract --xz --directory /usr/local --strip-components=1 --no-same-owner; \
+    cd /usr/local/bin && ln --symbolic node nodejs; \
+    npm install -g yarn
 
 RUN set -e; \
     apt-get update && apt-get install -y --no-install-recommends \
@@ -16,6 +25,9 @@ RUN set -e; \
         unzip; \
     apt-get clean; \
     rm -r /var/lib/apt/lists/*;
+
+RUN set -e; \
+    curl --silent --show-error --location  https://get.docker.com | bash
 
 RUN set -e; \
     if echo $PHP_BASE_IMAGE | grep -q "7.4"; then pecl install xdebug-3.1.6; else pecl install xdebug; fi; \
