@@ -13,7 +13,7 @@ To install php extension, please refer to [brabholdsa/php](https://hub.docker.co
 
 See repository on [Docker Hub](https://hub.docker.com/r/brabholdsa/php-dev)
 
-# Supported tags
+## Supported tags
 
 - `8.4-apache`, `8.4-apache-imagick`, `8.4-cli`, `8.4-cli-imagick`
 - `8.3-apache`, `8.3-apache-imagick`, `8.3-cli`, `8.3-cli-imagick`
@@ -22,10 +22,10 @@ See repository on [Docker Hub](https://hub.docker.com/r/brabholdsa/php-dev)
 - `8.0-apache`, `8.0-apache-imagick`, `8.0-cli`, `8.0-cli-imagick`
 - `7.4-apache`, `7.4-apache-imagick`, `7.4-cli`, `7.4-cli-imagick`
 
-## Available but not maintained
+### Available but not maintained
 - `7.3-apache`, `7.3-cli`
 - `5.6-apache`, `5.6-cli`
 
-# Manually build images
+## Manually build images
 
 Please use the build.sh on Github project [docker-php-build](https://github.com/brabhold/docker-php-build)
