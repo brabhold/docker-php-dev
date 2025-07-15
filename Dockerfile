@@ -20,11 +20,13 @@ RUN curl --silent --show-error --location "https://nodejs.org/dist/v${NODE_VERSI
     npm install --global yarn
 
 RUN apt update && apt install --assume-yes --no-install-recommends \
+        build-essential \
         git \
         less \
-        vim \
+        php$PHP_VERSION-xdebug \
+        python3 \
         unzip \
-        php$PHP_VERSION-xdebug && \
+        vim && \
     apt clean && \
     rm --recursive /var/lib/apt/lists/*
 
