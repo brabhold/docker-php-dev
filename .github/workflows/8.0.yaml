@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
 
       - name: Build and push brabholdsa/php-dev:8.0-cli
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             PHP_BASE_IMAGE=brabholdsa/php:8.0-cli
@@ -30,7 +30,7 @@ jobs:
           tags: brabholdsa/php-dev:8.0-cli
 
       - name: Build and push brabholdsa/php-dev:8.0-cli-imagick
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             PHP_BASE_IMAGE=brabholdsa/php:8.0-cli-imagick
@@ -40,7 +40,7 @@ jobs:
           tags: brabholdsa/php-dev:8.0-cli-imagick
 
       - name: Build and push brabholdsa/php-dev:8.0-apache
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             PHP_BASE_IMAGE=brabholdsa/php:8.0-apache
@@ -50,7 +50,7 @@ jobs:
           tags: brabholdsa/php-dev:8.0-apache
 
       - name: Build and push brabholdsa/php-dev:8.0-apache-imagick
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             PHP_BASE_IMAGE=brabholdsa/php:8.0-apache-imagick
