@@ -4,6 +4,7 @@
 [![8.2](https://github.com/brabhold/docker-php-dev/actions/workflows/8.2.yaml/badge.svg)](https://github.com/brabhold/docker-php-dev/actions/workflows/8.2.yaml)
 [![8.3](https://github.com/brabhold/docker-php-dev/actions/workflows/8.3.yaml/badge.svg)](https://github.com/brabhold/docker-php-dev/actions/workflows/8.3.yaml)
 [![8.4](https://github.com/brabhold/docker-php-dev/actions/workflows/8.4.yaml/badge.svg)](https://github.com/brabhold/docker-php-dev/actions/workflows/8.4.yaml)
+[![8.5](https://github.com/brabhold/docker-php-dev/actions/workflows/8.5.yaml/badge.svg)](https://github.com/brabhold/docker-php-dev/actions/workflows/8.5.yaml)
 
 # Custom build of PHP for development.
 
@@ -15,6 +16,7 @@ See repository on [Docker Hub](https://hub.docker.com/r/brabholdsa/php-dev)
 
 ## Supported tags
 
+- `8.5-apache`, `8.5-apache-imagick`, `8.5-cli`, `8.5-cli-imagick`
 - `8.4-apache`, `8.4-apache-imagick`, `8.4-cli`, `8.4-cli-imagick`
 - `8.3-apache`, `8.3-apache-imagick`, `8.3-cli`, `8.3-cli-imagick`
 - `8.2-apache`, `8.2-apache-imagick`, `8.2-cli`, `8.2-cli-imagick`
